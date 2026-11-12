@@ -1,0 +1,136 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Adoption & Responsible Pet Care</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>🐾 Pet Adoption & Responsible Pet Care</h1>
+        <p>Give a rescued animal a loving home.</p>
+    </header>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#pets">Available Pets</a>
+        <a href="#adoption-process">Adoption Process</a>
+        <a href="pet-care.html">Pet Care</a>
+        <a href="adoption.html">Adopt</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <div class="top-search">
+        <h2>Find Your New Companion</h2>
+
+        <form id="petSearchForm" class="search-panel">
+            <input type="search" id="petSearch"
+                   placeholder="🔎 Search name, breed, type or location...">
+
+            <select id="typeFilter" aria-label="Filter by animal type">
+                <option value="all">All Pets</option>
+                <option value="dog">Dogs</option>
+                <option value="cat">Cats</option>
+                <option value="bird">Birds</option>
+            </select>
+
+            <select id="breedFilter" aria-label="Filter by breed">
+                <option value="all">All Breeds</option>
+                <option value="labrador retriever">Labrador Retriever</option>
+                <option value="golden retriever">Golden Retriever</option>
+                <option value="beagle">Beagle</option>
+                <option value="persian">Persian</option>
+                <option value="indian domestic shorthair">Indian Domestic Shorthair</option>
+                <option value="siamese">Siamese</option>
+                <option value="indian ringneck parakeet">Indian Ringneck Parakeet</option>
+                <option value="budgerigar">Budgerigar</option>
+            </select>
+
+            <button type="submit">Search Pets</button>
+            <button type="button" id="clearFilters">Clear Filters</button>
+        </form>
+    </div>
+
+    <section id="home" class="hero">
+        <div class="hero-text">
+            <span class="badge">ADOPT • CARE • LOVE</span>
+            <h2>Find Your New Best Friend 🐾</h2>
+            <p>Give a stray or rescued animal a safe, caring and loving home.</p>
+            <p>Our Community Engagement Program promotes pet adoption and responsible pet care.</p>
+            <button onclick="document.getElementById('pets').scrollIntoView({behavior:'smooth'})">
+                Browse Available Pets
+            </button>
+        </div>
+
+        <div class="hero-image">
+            <img src="images/bruno.jpg" alt="Rescued dog">
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>About Our Initiative</h2>
+        <p>The Pet Adoption and Responsible Pet Care Initiative aims to promote the adoption of stray and rescued animals and create awareness about responsible pet ownership.</p>
+        <p>Through community engagement, adoption awareness and pet-care guidance, we encourage people to treat animals with care and compassion.</p>
+    </section>
+
+    <section id="pets">
+        <h2>Available Pets 🐾</h2>
+        <p>Search for your new companion by name, animal type, breed or location.</p>
+
+        <p id="resultsCount" class="results-count" aria-live="polite">
+            Loading pets from database...
+        </p>
+
+        <!-- Pet cards will be loaded from the database -->
+        <div class="pet-grid" id="petGrid"></div>
+
+        <p id="noResults" class="no-results" hidden>
+            No matching pets found. Try a different search or filter.
+        </p>
+
+        <p class="demo-note">
+            Note: Pet details and locations shown here are sample data for the college project.
+        </p>
+    </section>
+
+    <section id="adoption-process">
+        <h2>Adoption Process</h2>
+        <div class="process">
+            <div>
+                <h3>1️⃣ Select a Pet</h3>
+                <p>Choose an animal you are interested in adopting.</p>
+            </div>
+            <div>
+                <h3>2️⃣ Fill the Form</h3>
+                <p>Provide your basic information and adoption details.</p>
+            </div>
+            <div>
+                <h3>3️⃣ Interaction</h3>
+                <p>Understand the responsibilities of pet ownership.</p>
+            </div>
+            <div>
+                <h3>4️⃣ Adoption</h3>
+                <p>Complete the adoption process and provide a caring home.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us 📞</h2>
+        <p>Have questions about pet adoption or responsible pet care?</p>
+        <p>We are here to help you.</p>
+        <a href="contact.html"><button type="button">Contact Us</button></a>
+    </section>
+
+    <footer>
+        <p>Community Engagement Program (CEP)</p>
+        <p>TYCS - MGM College of Computer Science and Information Technology</p>
+        <p>Pet Adoption & Responsible Pet Care Initiative</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

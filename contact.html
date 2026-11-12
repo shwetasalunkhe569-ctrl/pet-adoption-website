@@ -1,0 +1,322 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Pet Adoption</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .contact-hero {
+            text-align: center;
+            padding: 45px 20px 25px;
+        }
+
+        .contact-hero h2 {
+            color: var(--green, #355b43);
+            font-size: 2.2rem;
+            margin-bottom: 12px;
+        }
+
+        .contact-hero p {
+            color: var(--muted, #70766d);
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+
+        .contact-layout {
+            max-width: 1050px;
+            margin: 10px auto 55px;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: 0.9fr 1.1fr;
+            gap: 28px;
+            align-items: stretch;
+        }
+
+        .contact-info {
+            background: var(--green, #355b43);
+            color: white;
+            padding: 35px;
+            border-radius: 24px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .contact-info h3 {
+            font-size: 1.7rem;
+            margin-top: 0;
+            margin-bottom: 12px;
+        }
+
+        .contact-info p {
+            line-height: 1.8;
+            color: #f0f5ef;
+        }
+
+        .contact-item {
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.15);
+            border-radius: 14px;
+            padding: 14px 16px;
+            margin-top: 15px;
+            line-height: 1.6;
+        }
+
+        .contact-form-card {
+            background: var(--white, #ffffff);
+            padding: 32px;
+            border-radius: 24px;
+            box-shadow: var(--shadow, 0 10px 30px rgba(53,91,67,0.09));
+            border: 1px solid #edf0e9;
+        }
+
+        .contact-form-card h3 {
+            color: var(--green, #355b43);
+            font-size: 1.6rem;
+            margin-top: 0;
+            margin-bottom: 8px;
+        }
+
+        .contact-form-card > p {
+            color: var(--muted, #70766d);
+            line-height: 1.6;
+            margin-bottom: 22px;
+        }
+
+        #contactForm {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        #contactForm input,
+        #contactForm textarea {
+            width: 100%;
+            padding: 14px 16px;
+            border: 1px solid #dfe6dc;
+            border-radius: 12px;
+            background: #fffdf9;
+            color: #394239;
+            font: inherit;
+            outline: none;
+            box-sizing: border-box;
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+
+        #contactForm input:focus,
+        #contactForm textarea:focus {
+            border-color: var(--green, #355b43);
+            box-shadow: 0 0 0 3px rgba(53,91,67,0.1);
+        }
+
+        #contactForm textarea {
+            min-height: 145px;
+            resize: vertical;
+        }
+
+        #contactForm button {
+            border: none;
+            border-radius: 12px;
+            padding: 15px 20px;
+            background: var(--peach, #e9a17e);
+            color: #302b25;
+            font: inherit;
+            font-weight: 700;
+            cursor: pointer;
+            transition: transform 0.2s, opacity 0.2s;
+        }
+
+        #contactForm button:hover {
+            transform: translateY(-2px);
+        }
+
+        #contactForm button:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        #formMessage {
+            margin-top: 16px;
+            font-weight: 600;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 700px) {
+            .contact-layout {
+                grid-template-columns: 1fr;
+                padding: 0 15px;
+                gap: 20px;
+            }
+
+            .contact-info,
+            .contact-form-card {
+                padding: 25px 20px;
+            }
+
+            .contact-hero h2 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>🐾 Let's Talk About Pets</h1>
+        <p>Questions, ideas, or need help? We're here for you!</p>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="index.html#pets">Available Pets</a>
+        <a href="index.html#adoption-process">Adoption Process</a>
+        <a href="pet-care.html">Pet Care</a>
+        <a href="adoption.html">Adopt</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <main>
+        <section class="contact-hero">
+            <h2>Get In Touch 💌</h2>
+            <p>
+                Every pet deserves love and care. Contact us if you have
+                questions about adoption or responsible pet care.
+            </p>
+        </section>
+
+        <section class="contact-layout">
+
+            <div class="contact-info">
+                <h3>We'd Love to Hear From You! 🐶</h3>
+
+                <p>
+                    Whether you're thinking about adopting a pet or learning
+                    how to care for one, we're happy to help.
+                </p>
+
+                <div class="contact-item">
+                    🐾 <strong>Pet Adoption</strong><br>
+                    Learn about our available pets and adoption process.
+                </div>
+
+                <div class="contact-item">
+                    ❤️ <strong>Responsible Pet Care</strong><br>
+                    Understand proper feeding, health, vaccination and safety.
+                </div>
+
+                <div class="contact-item">
+                    🤝 <strong>Our Initiative</strong><br>
+                    Community Engagement Program (CEP)<br>
+                    TYCS - MGM College of Computer Science and Information Technology
+                </div>
+            </div>
+
+            <div class="contact-form-card">
+                <h3>Send Us a Message</h3>
+                <p>Fill in the details below and we'll receive your message.</p>
+
+                <form id="contactForm">
+                    <input
+                        type="text"
+                        id="contactName"
+                        placeholder="Your Name"
+                        autocomplete="name"
+                        required
+                    >
+
+                    <input
+                        type="email"
+                        id="contactEmail"
+                        placeholder="Email Address"
+                        autocomplete="email"
+                        required
+                    >
+
+                    <input
+                        type="tel"
+                        id="contactPhone"
+                        placeholder="Contact Number"
+                        autocomplete="tel"
+                        required
+                    >
+
+                    <textarea
+                        id="contactMessage"
+                        placeholder="Write your message..."
+                        required
+                    ></textarea>
+
+                    <button type="submit" id="sendBtn">
+                        Send Message ✉️
+                    </button>
+                </form>
+
+                <p id="formMessage" role="status" aria-live="polite"></p>
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>Community Engagement Program (CEP)</p>
+        <p>TYCS - MGM College of Computer Science and Information Technology</p>
+        <p>Pet Adoption &amp; Responsible Pet Care Initiative 🐾</p>
+    </footer>
+
+    <script>
+        const contactForm = document.getElementById("contactForm");
+        const formMessage = document.getElementById("formMessage");
+        const sendBtn = document.getElementById("sendBtn");
+
+        contactForm.addEventListener("submit", async function(event) {
+            event.preventDefault();
+
+            sendBtn.disabled = true;
+            formMessage.textContent = "Sending your message...";
+
+            const contactData = {
+                name: document.getElementById("contactName").value.trim(),
+                email: document.getElementById("contactEmail").value.trim(),
+                contact: document.getElementById("contactPhone").value.trim(),
+                message: document.getElementById("contactMessage").value.trim()
+            };
+
+            try {
+                const response = await fetch("/api/contact", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify(contactData)
+                });
+
+                const result = await response.json();
+
+                if (!response.ok) {
+                    throw new Error(
+                        result.message || "Message could not be saved."
+                    );
+                }
+
+                formMessage.textContent =
+                    "Success! Your message has been saved.";
+                contactForm.reset();
+
+            } catch (error) {
+                console.error(error);
+                formMessage.textContent =
+                    "Could not send your message. Please check the backend server.";
+            } finally {
+                sendBtn.disabled = false;
+            }
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,301 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Adoption | Pawfect Pals</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .adoption-hero {
+            padding: 45px 20px;
+            text-align: center;
+            background: linear-gradient(135deg, #eaf2e5, #fff0e5);
+        }
+
+        .adoption-hero .paw {
+            font-size: 42px;
+        }
+
+        .adoption-hero h2 {
+            color: #355b43;
+            font-size: clamp(30px, 4vw, 42px);
+            margin: 8px 0;
+        }
+
+        .adoption-hero p {
+            color: #70766d;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .adoption-layout {
+            display: grid;
+            grid-template-columns: 0.85fr 1.4fr;
+            gap: 35px;
+            max-width: 1050px;
+            margin: 0 auto;
+            align-items: start;
+            text-align: left;
+        }
+
+        .adoption-info {
+            background: #355b43;
+            color: white;
+            padding: 32px;
+            border-radius: 25px;
+            text-align: left;
+        }
+
+        .adoption-info h3 {
+            font-size: 25px;
+            margin-bottom: 14px;
+        }
+
+        .adoption-info p {
+            color: #edf4e9;
+            margin-bottom: 20px;
+        }
+
+        .adoption-info ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .adoption-info li {
+            margin: 15px 0;
+            line-height: 1.6;
+        }
+
+        .adoption-form-card {
+            min-width: 0;
+        }
+
+        .adoption-form-card h3 {
+            color: #355b43;
+            font-size: 25px;
+            margin-bottom: 5px;
+        }
+
+        .adoption-form-card > p {
+            color: #70766d;
+        }
+
+        #adoptionForm {
+            margin: 20px 0 0;
+            padding: 28px;
+            text-align: left;
+            border-radius: 24px;
+            background: white;
+            box-shadow: 0 10px 30px rgba(53, 91, 67, 0.09);
+        }
+
+        #adoptionForm label {
+            display: block;
+            font-weight: 600;
+            color: #394239;
+            margin-top: 13px;
+        }
+
+        #adoptionForm input,
+        #adoptionForm textarea {
+            display: block;
+            width: 100%;
+            margin: 6px 0 12px;
+            padding: 13px;
+            border: 1px solid #dedfd5;
+            border-radius: 12px;
+            background: #fffdf9;
+            font-size: 15px;
+        }
+
+        #adoptionForm textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        #adoptionForm button {
+            width: 100%;
+            margin-top: 18px;
+        }
+
+        #adoptionForm button:disabled {
+            opacity: 0.65;
+            cursor: wait;
+            transform: none;
+        }
+
+        #formMessage {
+            margin-top: 18px;
+            font-weight: 600;
+            overflow-wrap: anywhere;
+        }
+
+        .adoption-note {
+            margin-top: 18px;
+            color: #70766d;
+            font-size: 13px;
+        }
+
+        @media (max-width: 760px) {
+            .adoption-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .adoption-info {
+                padding: 25px;
+            }
+
+            #adoptionForm {
+                padding: 22px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>🐾 Pet Adoption</h1>
+        <p>Give a rescued animal a loving home.</p>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="index.html#pets">Available Pets</a>
+        <a href="index.html#adoption-process">Adoption Process</a>
+        <a href="pet-care.html">Pet Care</a>
+        <a href="adoption.html">Adopt</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <div class="adoption-hero">
+        <div class="paw">🐶 🐱</div>
+        <h2>Every Pet Deserves Love</h2>
+        <p>Take the first step towards giving a rescued pet a safe, caring and happy home.</p>
+    </div>
+
+    <section>
+        <div class="adoption-layout">
+
+            <div class="adoption-info">
+                <h3>Why Adopt? 💚</h3>
+                <p>Adoption gives animals a chance to experience love, safety and companionship.</p>
+
+                <ul>
+                    <li>🐾 Give a rescued pet a loving home.</li>
+                    <li>🏡 Provide safety, comfort and care.</li>
+                    <li>🥣 Understand feeding and daily care needs.</li>
+                    <li>🩺 Be prepared for regular veterinary visits.</li>
+                    <li>❤️ Make a positive difference in an animal's life.</li>
+                </ul>
+            </div>
+
+            <div class="adoption-form-card">
+                <h3>Adoption Request Form</h3>
+                <p>Please enter your details below.</p>
+
+                <form id="adoptionForm">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name"
+                           placeholder="Enter your full name" required>
+
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email"
+                           placeholder="Enter your email" required>
+
+                    <label for="phone">Contact Number</label>
+                    <input type="tel" id="phone"
+                           placeholder="Enter your contact number"
+                           required>
+
+                    <label for="pet">Pet Name</label>
+                    <input type="text" id="pet" name="pet"
+                           placeholder="Enter the pet's name" required>
+
+                    <label for="reason">Why would you like to adopt?</label>
+                    <textarea id="reason"
+                              placeholder="Tell us why you want to adopt this pet..."
+                              required></textarea>
+
+                    <button type="submit" id="submitBtn">
+                        Submit Adoption Request 🐾
+                    </button>
+
+                    <p id="formMessage" role="status" aria-live="polite"></p>
+                </form>
+
+                <p class="adoption-note">
+                    Your request will be submitted to the project's backend.
+                    Submission does not mean the adoption is confirmed.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <p>Community Engagement Program (CEP)</p>
+        <p>TYCS - MGM College of Computer Science and Information Technology</p>
+        <p>Pet Adoption &amp; Responsible Pet Care Initiative</p>
+    </footer>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const selectedPet = urlParams.get("pet");
+
+        if (selectedPet) {
+            document.getElementById("pet").value = selectedPet;
+        }
+
+        const form = document.getElementById("adoptionForm");
+        const message = document.getElementById("formMessage");
+        const submitBtn = document.getElementById("submitBtn");
+
+        form.addEventListener("submit", async function(event) {
+            event.preventDefault();
+
+            submitBtn.disabled = true;
+            message.textContent = "Submitting your request...";
+
+            const adoptionData = {
+                name: document.getElementById("name").value.trim(),
+                email: document.getElementById("email").value.trim(),
+                contact: document.getElementById("phone").value.trim(),
+                pet_name: document.getElementById("pet").value.trim(),
+                reason: document.getElementById("reason").value.trim()
+            };
+
+            try {
+                const response = await fetch("/api/adoptions", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify(adoptionData)
+                });
+
+                const result = await response.json();
+
+                if (!response.ok) {
+                    throw new Error(
+                        result.message || "Request could not be submitted."
+                    );
+                }
+
+                message.textContent =
+                    "Success! Your adoption request has been saved.";
+                form.reset();
+
+            } catch (error) {
+                message.textContent =
+                    "Could not submit the request. Check that the backend server is running and try again.";
+                console.error(error);
+
+            } finally {
+                submitBtn.disabled = false;
+            }
+        });
+    </script>
+
+</body>
+</html>

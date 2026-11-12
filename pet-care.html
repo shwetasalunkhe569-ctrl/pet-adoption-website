@@ -1,0 +1,436 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Care Guide | Pet Adoption</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .care-introduction,
+        .animal-care,
+        .common-care,
+        .responsible-owner {
+            max-width: 1100px;
+            margin: 30px auto;
+            padding: 30px;
+            box-sizing: border-box;
+        }
+
+        .care-introduction {
+            text-align: center;
+            background: var(--white, #fff);
+            border-radius: 22px;
+            box-shadow: var(--shadow, 0 10px 30px rgba(53,91,67,.09));
+        }
+
+        .care-introduction h2,
+        .common-care > h2,
+        .responsible-owner h2 {
+            color: var(--green, #355b43);
+        }
+
+        .care-introduction p {
+            max-width: 850px;
+            margin: 12px auto;
+            line-height: 1.8;
+            color: var(--muted, #70766d);
+        }
+
+        .animal-care {
+            display: grid;
+            grid-template-columns: 100px 1fr;
+            gap: 25px;
+            align-items: start;
+            background: var(--white, #fff);
+            border-radius: 22px;
+            box-shadow: var(--shadow, 0 10px 30px rgba(53,91,67,.09));
+            border: 1px solid #edf0e9;
+        }
+
+        .animal-icon {
+            width: 85px;
+            height: 85px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 48px;
+            background: var(--green-light, #e8f0e5);
+            border-radius: 22px;
+        }
+
+        .cat-care .animal-icon {
+            background: #fff0e6;
+        }
+
+        .bird-care .animal-icon {
+            background: #fff4cf;
+        }
+
+        .animal-content h2 {
+            color: var(--green, #355b43);
+            margin-top: 0;
+            font-size: 1.8rem;
+        }
+
+        .animal-content > p {
+            line-height: 1.8;
+            color: var(--muted, #70766d);
+        }
+
+        .animal-content h3 {
+            margin: 24px 0 10px;
+            color: var(--green, #355b43);
+            font-size: 1.08rem;
+        }
+
+        .animal-content ul {
+            padding-left: 23px;
+            margin: 0;
+        }
+
+        .animal-content li {
+            padding: 5px 0;
+            line-height: 1.7;
+            color: var(--text, #394239);
+        }
+
+        .common-care {
+            text-align: center;
+        }
+
+        .common-care > h2 {
+            font-size: 1.9rem;
+            margin-bottom: 25px;
+        }
+
+        .care-grid {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 18px;
+            text-align: left;
+        }
+
+        .care-box {
+            padding: 22px 18px;
+            border-radius: 18px;
+            background: var(--white, #fff);
+            border: 1px solid #edf0e9;
+            box-shadow: var(--shadow, 0 10px 30px rgba(53,91,67,.09));
+            transition: transform .2s ease;
+        }
+
+        .care-box:hover {
+            transform: translateY(-4px);
+        }
+
+        .care-box h3 {
+            color: var(--green, #355b43);
+            margin-top: 0;
+        }
+
+        .care-box p {
+            color: var(--muted, #70766d);
+            line-height: 1.7;
+            margin-bottom: 0;
+        }
+
+        .responsible-owner {
+            text-align: center;
+            border-radius: 24px;
+            background: var(--green-light, #e8f0e5);
+            padding: 40px 30px;
+        }
+
+        .responsible-owner h2 {
+            margin-top: 0;
+            font-size: 1.9rem;
+        }
+
+        .responsible-owner p {
+            max-width: 800px;
+            margin: 12px auto;
+            line-height: 1.8;
+            color: var(--text, #394239);
+        }
+
+        .adoption-link {
+            display: inline-block;
+            margin-top: 18px;
+            padding: 14px 24px;
+            border-radius: 12px;
+            background: var(--peach, #e9a17e);
+            color: #302b25;
+            text-decoration: none;
+            font-weight: 700;
+            transition: transform .2s ease;
+        }
+
+        .adoption-link:hover {
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 900px) {
+            .care-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .care-introduction,
+            .animal-care,
+            .common-care,
+            .responsible-owner {
+                margin: 22px 15px;
+                padding: 25px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .animal-care {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+
+            .animal-icon {
+                width: 70px;
+                height: 70px;
+                font-size: 40px;
+            }
+
+            .care-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .animal-content h2,
+            .common-care > h2,
+            .responsible-owner h2 {
+                font-size: 1.55rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>🐾 Responsible Pet Care Guide</h1>
+        <p>Learn how to provide proper care, safety and love to your adopted pet.</p>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="index.html#pets">Available Pets</a>
+        <a href="index.html#adoption-process">Adoption Process</a>
+        <a href="pet-care.html">Pet Care</a>
+        <a href="adoption.html">Adopt</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <main>
+
+        <section class="care-introduction">
+            <h2>Why Responsible Pet Care Matters ❤️</h2>
+            <p>
+                Adopting a pet is a long-term responsibility.
+                Every animal needs proper food, clean water, hygiene,
+                medical attention, exercise, safety and affection.
+            </p>
+            <p>
+                Different animals have different needs. Pet owners
+                should understand the basic care requirements of
+                the animal they adopt.
+            </p>
+        </section>
+
+        <section class="animal-care dog-care">
+            <div class="animal-icon">🐶</div>
+            <div class="animal-content">
+                <h2>Dog Care</h2>
+                <p>
+                    Dogs need regular food, clean water, hygiene,
+                    exercise, vaccination and veterinary care.
+                    They also need attention, training and a safe environment.
+                </p>
+
+                <h3>🍚 Food & Nutrition</h3>
+                <ul>
+                    <li>Provide suitable and nutritious food.</li>
+                    <li>Maintain a regular feeding routine.</li>
+                    <li>Avoid giving dogs food that may be harmful.</li>
+                </ul>
+
+                <h3>🏃 Exercise & Activity</h3>
+                <ul>
+                    <li>Provide suitable daily physical activity.</li>
+                    <li>Allow time for walking and play.</li>
+                    <li>Provide mental stimulation through suitable activities.</li>
+                </ul>
+
+                <h3>🧼 Hygiene</h3>
+                <ul>
+                    <li>Keep the dog and its living area clean.</li>
+                    <li>Maintain appropriate grooming.</li>
+                    <li>Keep food and water bowls clean.</li>
+                </ul>
+
+                <h3>💉 Vaccination & Medical Care</h3>
+                <ul>
+                    <li>Follow a veterinarian-recommended vaccination schedule.</li>
+                    <li>Keep vaccination and medical records.</li>
+                    <li>Consult a veterinarian if the dog seems unwell or behaves unusually.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="animal-care cat-care">
+            <div class="animal-icon">🐱</div>
+            <div class="animal-content">
+                <h2>Cat Care</h2>
+                <p>
+                    Cats need proper nutrition, clean water, hygiene,
+                    a safe environment and regular veterinary attention.
+                </p>
+
+                <h3>🍚 Food & Nutrition</h3>
+                <ul>
+                    <li>Provide food suitable for cats.</li>
+                    <li>Maintain a regular feeding routine.</li>
+                    <li>Keep feeding areas clean.</li>
+                </ul>
+
+                <h3>🏃 Activity & Play</h3>
+                <ul>
+                    <li>Give cats opportunities for safe play.</li>
+                    <li>Provide suitable toys and activities.</li>
+                    <li>Allow enough time for rest and sleep.</li>
+                </ul>
+
+                <h3>🧼 Hygiene</h3>
+                <ul>
+                    <li>Keep the cat's living area clean.</li>
+                    <li>Maintain proper grooming.</li>
+                    <li>Keep food and water bowls clean.</li>
+                </ul>
+
+                <h3>💉 Vaccination & Veterinary Care</h3>
+                <ul>
+                    <li>Follow a veterinarian-recommended vaccination schedule.</li>
+                    <li>Keep regular veterinary records.</li>
+                    <li>Seek veterinary help when the cat appears unwell.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="animal-care bird-care">
+            <div class="animal-icon">🦜</div>
+            <div class="animal-content">
+                <h2>Bird Care</h2>
+                <p>
+                    Birds need suitable food, clean water, cleanliness,
+                    safe housing and regular attention. Their environment
+                    should allow appropriate movement and activity.
+                </p>
+
+                <h3>🌾 Food & Nutrition</h3>
+                <ul>
+                    <li>Provide food appropriate for the particular bird.</li>
+                    <li>Provide clean drinking water.</li>
+                    <li>Keep food and water containers clean.</li>
+                </ul>
+
+                <h3>🏠 Safe Environment</h3>
+                <ul>
+                    <li>Provide a clean and suitable living space.</li>
+                    <li>Keep the bird away from dangerous situations.</li>
+                    <li>Provide enough space for comfortable movement.</li>
+                </ul>
+
+                <h3>🧼 Hygiene</h3>
+                <ul>
+                    <li>Clean the bird's living area regularly.</li>
+                    <li>Keep food and water containers hygienic.</li>
+                    <li>Maintain a clean environment around the bird.</li>
+                </ul>
+
+                <h3>🩺 Veterinary Care</h3>
+                <ul>
+                    <li>Seek veterinary advice when required.</li>
+                    <li>Notice changes in behaviour, eating or activity.</li>
+                    <li>Use professional veterinary guidance for health concerns.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="common-care">
+            <h2>🩺 Common Pet Care Responsibilities</h2>
+
+            <div class="care-grid">
+                <div class="care-box">
+                    <h3>🍚 Food</h3>
+                    <p>Provide appropriate and nutritious food according to the animal's needs.</p>
+                </div>
+
+                <div class="care-box">
+                    <h3>💧 Clean Water</h3>
+                    <p>Always provide access to clean drinking water.</p>
+                </div>
+
+                <div class="care-box">
+                    <h3>🧼 Hygiene</h3>
+                    <p>Keep pets, feeding areas and living spaces clean.</p>
+                </div>
+
+                <div class="care-box">
+                    <h3>💉 Vaccination</h3>
+                    <p>Follow a veterinarian-recommended vaccination and preventive-care schedule.</p>
+                </div>
+
+                <div class="care-box">
+                    <h3>🩺 Veterinary Care</h3>
+                    <p>Seek professional veterinary support when your pet needs medical attention.</p>
+                </div>
+
+                <div class="care-box">
+                    <h3>🏃 Exercise</h3>
+                    <p>Provide suitable physical activity, play and stimulation according to the animal.</p>
+                </div>
+
+                <div class="care-box">
+                    <h3>🏠 Safe Shelter</h3>
+                    <p>Provide a clean, comfortable and safe place for the pet to rest and live.</p>
+                </div>
+
+                <div class="care-box">
+                    <h3>❤️ Love & Attention</h3>
+                    <p>Treat animals with kindness, patience and compassion.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="responsible-owner">
+            <h2>❤️ Be a Responsible Pet Owner</h2>
+            <p>
+                Before adopting an animal, make sure you are ready to
+                provide proper food, hygiene, shelter, medical care,
+                exercise, time and attention.
+            </p>
+            <p>
+                Responsible pet ownership means understanding the needs
+                of the animal and providing care throughout its life.
+            </p>
+
+            <a class="adoption-link" href="adoption.html">
+                Start Adoption Process 🐾
+            </a>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Community Engagement Program (CEP)</p>
+        <p>TYCS - MGM College of Computer Science and Information Technology</p>
+        <p>Pet Adoption &amp; Responsible Pet Care Initiative 🐾</p>
+    </footer>
+
+</body>
+</html>

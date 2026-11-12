@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Search Results</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>🐾 Pet Adoption &amp; Responsible Pet Care</h1>
+        <p>Find a friend. Give them a home.</p>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="index.html#pets">Available Pets</a>
+        <a href="index.html#adoption-process">Adoption Process</a>
+        <a href="pet-care.html">Pet Care</a>
+        <a href="adoption.html">Adopt</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <main class="results-page">
+        <h2>Pet Search Results 🐾</h2>
+        <p id="searchSummary" class="search-summary" aria-live="polite"></p>
+
+        <form class="search-panel results-search" action="results.html" method="get">
+            <input type="search" id="petSearch" name="q" placeholder="Search name, breed, type or location..." aria-label="Search pets">
+
+            <select id="typeFilter" name="type" aria-label="Filter by animal type">
+                <option value="all">All Pets</option>
+                <option value="dog">Dogs</option>
+                <option value="cat">Cats</option>
+                <option value="bird">Birds</option>
+            </select>
+
+            <select id="breedFilter" name="breed" aria-label="Filter by breed">
+                <option value="all">All Breeds</option>
+                <option value="labrador retriever">Labrador Retriever</option>
+                <option value="golden retriever">Golden Retriever</option>
+                <option value="beagle">Beagle</option>
+                <option value="indian pariah">Indian Pariah</option>
+                <option value="persian">Persian</option>
+                <option value="indian domestic shorthair">Indian Domestic Shorthair</option>
+                <option value="siamese">Siamese</option>
+                <option value="indian ringneck parakeet">Indian Ringneck Parakeet</option>
+                <option value="budgerigar">Budgerigar</option>
+            </select>
+
+            <button type="submit">Search Pets</button>
+            <a class="clear-search" href="results.html">Clear Filters</a>
+        </form>
+
+        <p id="resultsCount" class="results-count" aria-live="polite"></p>
+        <div class="pet-grid" id="resultsGrid"></div>
+        <p id="noResults" class="no-results" hidden>No matching pets found. Try a different search or filter.</p>
+        <a class="back-to-home" href="index.html">← Back to Home</a>
+    </main>
+
+    <footer>
+        <p>Community Engagement Program (CEP)</p>
+        <p>TYCS - MGM College of Computer Science and Information Technology</p>
+        <p>Pet Adoption &amp; Responsible Pet Care Initiative</p>
+    </footer>
+
+    <script src="results.js"></script>
+</body>
+</html>
